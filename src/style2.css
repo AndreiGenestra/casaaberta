@@ -1,0 +1,141 @@
+
+:root{
+    --roxoescuro:#4f1446;
+    --roxopreto: #0d001a;
+    --grape:#b42593;
+    --violeta: #6e5181;
+    --purple: #6d85a5;
+    --blue:#6cb9c9;
+    --ciano:#6ceded;
+    --texto:#FFFFFF;
+    --preto: #000000;
+  }
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(./imagens/fundopretoso.jpg);
+    overflow: hidden;
+    position: relative; /*posicionamento absoluto, por isso position relative */
+  }
+  
+  #content {
+    z-index: 5; /* conteúdo pra cima do iframe */
+    text-align: center;
+    position: relative;
+    color:var(--violeta);
+    font-family: "ui";
+  }
+
+  #content p{
+    font-size: 75px;
+    font-family: "titulo";
+  }
+  .titulo{
+    width:100%;
+  
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: var(--texto);
+      font-size: 3em; 
+      color: var(--violeta);
+      
+    
+    
+  }
+  
+
+  .open-button{
+    border: solid 2px var(--texto) ;
+    width:200px;
+    background-color: var(--violeta);
+    color: var(--roxopreto);
+    transition-duration:1s;
+    border-radius:30px;
+   
+  }
+  
+ 
+
+  .open-button:hover{
+    
+    background-color: var(--texto);
+    color: var(--roxopreto);
+    transition-duration:1s;
+    text-align: center;
+    align-content: center ;
+  }
+  #circle-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:var(--roxopreto);
+    clip-path: circle(150% at center); /* tamanho do círculo no começo */
+    z-index: 10; /* pra fazer a animação cobrir a página toda*/
+    display: none; /* escondido no começo */
+  }
+  
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* z-indez pra deixar o iframe embaixo do círculo */
+    display: none; /* escondido no começo */
+  }
+  
+  /* código de fechar círculo */
+  @keyframes closeCircle {
+    100% {
+      clip-path: circle(0% at center); /* começa grande */
+    }
+    0% {
+      clip-path: circle(150% at center); /* fechar no meinho */
+    }
+
+    
+  }
+  
+  body.animate #circle-animation {
+    display: block;
+    animation: closeCircle 2s forwards; /* animação de fechar */
+  }
+  
+  body.animate #content {
+    display: none; /* não mostrar conteúdo original */
+  }
+  
+  body.animate iframe {
+    display: block; /* iframe depoi da animação */
+    z-index: 0;
+  }
+
+  body.animate .footer{
+    display: none; /* não mostrar conteúdo original */
+  }
+
+  .footer{
+    position: absolute;
+    background-color: var(--violeta);
+    bottom:0px;
+    height:30px;
+    width: 100%;
+    color: var(--texto);
+    font-size: 25px;
+    font-family: "ui";
+    
+   
+  }
+
+  @font-face {
+    font-family: "ui";
+    src: url(./font/Jersey25-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: "titulo";
+    src: url(./font/DelaGothicOne-Regular.ttf);
+  }

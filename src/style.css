@@ -1,0 +1,163 @@
+
+:root{
+  --roxoescuro:#4f1446;
+  --roxopreto: #0d001a;
+  --grape:#6f1d5c;
+  --violeta: #6e5181;
+  --purple: #6d85a5;
+  --blue:#6cb9c9;
+  --ciano:#6ceded;
+  --texto:#FFFFFF;
+  --preto: #000000;
+}
+
+body{
+  margin: 0;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+    
+}
+
+
+/*
+<div class="navbar">
+        <div class="navbar-logo">Logo</div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Sobre</a>
+          <a href="#">Contato</a>
+        </div>
+    </div>
+
+ */   
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 3rem;
+    background-color: var(--violeta);
+    border-bottom: solid 1px var(--ciano);
+  }
+  
+  .navbar-logo {
+    flex: 1;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    flex:1;
+  }
+#titulo {
+  width: 500px;
+  margin-top: 200px;
+  text-align: center;
+  margin: auto;
+  font-size: 30px;
+  
+
+}
+
+#circle-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #6ceded;
+  clip-path: circle(150% at center); /* tamanho do círculo no começo */
+  z-index: 10; /* pra fazer a animação cobrir a página toda*/
+  display: none; /* escondido no começo */
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* z-indez pra deixar o iframe embaixo do círculo */
+  display: none; /* escondido no começo */
+}
+
+/* código de fechar círculo */
+@keyframes closeCircle {
+  100% {
+    clip-path: circle(0% at center); /* começa grande */
+  }
+  0% {
+    clip-path: circle(150% at center); /* fechar no meinho */
+  }
+
+  
+}
+
+body.animate #circle-animation {
+  display: block;
+  animation: closeCircle 2s forwards; /* animação de fechar */
+}
+
+body.animate .content {
+  display: none; /* não mostrar conteúdo original */
+}
+
+body.animate #body {
+  display: none; /* não mostrar conteúdo original */
+}
+
+body.animate .iframe {
+  display: block; /* iframe depoi da animação */
+  z-index: 0;
+}
+
+.footer{
+  position: absolute;
+  background-color: var(--roxoescuro);
+  bottom:0px;
+  height:30px;
+  width: 100%;
+  color: var(--texto);
+  font-size: 25px;
+  font-family: "ui";
+ 
+}
+#prox{
+  
+  background-color:var(--purple);
+   
+}
+  .content{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    z-index: 5;
+  
+    
+  }
+  .content h1{
+    color: var(--blue);
+    font-family: "ui";
+  }
+
+  .footer{
+    position: absolute;
+    background-color: var(--roxoescuro);
+    bottom:0px;
+    height:30px;
+    width: 100%;
+    color: var(--texto);
+    font-size: 25px;
+    font-family: "ui";
+   
+  }
+
+  @font-face {
+    font-family: "ui";
+    src: url(./font/Jersey25-Regular.ttf);
+  }

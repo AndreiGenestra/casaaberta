@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="./src/styleslides.css">
+    <link rel="icon" type="image/x-icon" href="./src/imagens/log.png">
+
+  
+    <title></title>
+</head>
+<style>
+    
+</style>
+<body >
+    <!-- <div class="navbar">
+        <div class="navbar-logo">Logo</div>
+        
+        <div class="nav-links">
+        
+          <a href="./index2.html">Home</a>
+          <a href="./next.html">Ciclo de Vida</a>
+          <a href="./caracteristicas.html">Características</a>
+          <a href="./expansao.html">Expansão</a>
+          <a href="./jogo.html">Jogo</a>
+        
+        </div>
+    </div> -->
+    
+    <button class="button-link" href="#" onclick="addSlides(-1)">
+        <span> &#10094; </span>
+        
+    </button>
+    <div class="container">
+        
+        <div class="slides fade" >
+            <img src="./src/imagens/caracteristicas.jpeg"/>
+            <h2 class="title">Características</h2> 
+            <p class="content"> Lorem ipsum dolor, sit amet consectetur adipisicing</p>
+            <button class="button" ><a href="caracteristicas.html" class="acessar-style">Acessar</a></button>
+        </div>
+        <div class="slides fade" >
+            <img src="./src/imagens/ciclo.jpg"/>
+            <h2 class="title">Ciclo de vida das estrelas</h2> 
+            <p class="content"> Lorem ipsum dolor, sit amet consectetur adipisicing</p>
+            <button class="button" ><a href="ciclo.html" class="acessar-style">Acessar</a></button>
+        </div>
+        <div class="slides fade" >
+            <img src="./src/imagens/expansao.jpg"/>
+            <h2 class="title">Expansão do universo</h2> 
+            <p class="content"> Lorem ipsum dolor, sit amet consectetur adipisicing <br> <br>
+                
+            </p>
+            <button class="button"> <a href="expansao.html" class="acessar-style">Acessar</a></button>
+        </div>
+        <div class="footer">
+            
+            <div class="dot-box">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+                    
+        </div>
+    </div>
+    <button class="button-link" onclick="addSlides(1)">&#10095;</button>
+
+ 
+   
+    <script src="handle.js"></script>
+
+  
+    <!-- tentar mudar invés da imagem e dois slides, tentar colocar os slides pra trocarem o container em si, e nao trocar eles dentro do container-->
+</body>
+</html>

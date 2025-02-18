@@ -1,0 +1,118 @@
+:root{
+  --roxoescuro:#4f1446;
+  --roxopreto: #0d001a;
+  --grape:#7522af;
+  --violeta: #6e5181;
+  --purple: #6d85a5;
+  --blue:#6cb9c9;
+  --ciano:#6ceded;
+  --texto:#FFFFFF;
+  --preto: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+}
+body{
+  background-image: url(./imagens/fundopretoso.jpg);
+  text-align: center;
+ 
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 3rem;
+    background-color: var(--grape);
+    border-bottom: solid 4px var(--violeta);
+    margin-bottom: 30px;
+    position: fixed;
+    width:100%;
+  }
+  
+  .navbar-logo {
+    flex: 1;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    flex: 1.6;
+
+    
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    border-radius: 5%;
+    max-width: 200px;
+    text-align: center;
+    padding: 5px;
+    color: var(--texto);
+    opacity: 1;
+    font-family: "ui";
+    font-size: 20px;
+    background-color: var(--grape);
+
+
+
+  }
+
+  .nav-links a:hover{
+    opacity: 1;
+    transition: 1s;
+    background-color: var(--texto);
+    color:var(--violeta);
+  }
+#titulo {
+  width: 500px;
+  margin-top: 200px;
+  text-align: center;
+  margin: auto;
+  font-size: 30px;
+  
+
+}
+
+.titulo-conteudo{
+
+  color:var(--texto);
+  font-family: "texto";
+  font-size: 25px;
+  margin-bottom: 50px;
+  margin-top:50px;
+
+
+}
+.content{
+  background-color: var(--texto);
+  color:var(--preto);
+  width:75%;
+  margin:auto;
+  padding:30px;
+  border-radius: 30px;
+  text-align: center;
+  font-family: "text";
+}
+.content p{
+  text-align: justify;
+  font-size:20px;
+}
+
+.content ul{
+  text-align: left;
+}
+
+.linhas{
+  color:var(--texto);
+  font-size: 50px;
+}
+
+@font-face{
+  font-family: "text";
+  src: url(./font/Oswald-VariableFont_wght.ttf)
+}
